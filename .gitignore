@@ -1,0 +1,57 @@
+# 🐍 Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# 📦 Virtual Environment
+.venv/
+env/
+venv/
+ENV/
+*.env
+
+# 📚 LangChain / Chroma
+store/
+*.db
+*.sqlite
+*.jsonl
+
+# 🔐 Secrets
+.env
+*.key
+*.pem
+
+# 🧪 Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.pyc
+
+# 🧠 Jupyter & IPython
+.ipynb_checkpoints/
+*.ipynb
+
+# 🧠 VS Code & PyCharm
+.vscode/
+.idea/
+*.iml
+
+# 📦 Package manager
+pip-log.txt
+poetry.lock
+Pipfile.lock
+
+# 🗑️ OS-specific
+.DS_Store
+Thumbs.db

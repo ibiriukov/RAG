@@ -1,0 +1,7 @@
+RAG stands for Retrieval-Augmented Generation.
+It combines two main components:
+1. A retriever that finds relevant text chunks from stored documents.
+2. A generator, like GPT-4, that uses these chunks to produce an informed answer.
+
+RAG improves factual accuracy and reduces hallucination because the model bases its response on actual documents.
+A typical RAG pipeline: Ingest data → Embed text → Store vectors → Retrieve top-k → Generate answer.

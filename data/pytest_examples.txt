@@ -1,0 +1,12 @@
+Pytest is a Python testing framework that helps you write and run automated tests.
+Key features:
+- Simple test naming: any function starting with test_() will be run automatically.
+- Assertions: use assert statements to check expected results.
+- Fixtures: reusable setup and teardown logic.
+- Parametrization: run the same test with multiple data sets.
+- Plugins: such as pytest-xdist for parallel runs or pytest-html for reports.
+
+Command examples:
+pytest -v                   # verbose mode
+pytest -n 3                 # run tests in 3 parallel threads
+pytest --html=report.html   # generate HTML report

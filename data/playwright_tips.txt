@@ -1,0 +1,15 @@
+Playwright is a modern end-to-end testing framework that automates browsers like Chrome, Firefox, and WebKit.
+
+Advantages:
+- Supports multiple browsers and devices.
+- Fast and reliable execution using headless mode.
+- Built-in wait mechanism (auto-waits for elements to appear).
+- Supports parallel test execution.
+
+Common methods:
+page.goto("https://example.com")
+page.get_by_role("button", name="Login").click()
+expect(page.get_by_text("Dashboard")).to_be_visible()
+
+Environment variables such as BROWSER and HEADED let you switch modes:
+$env:BROWSER="firefox"; $env:HEADED="true"; pytest -v

@@ -1,0 +1,8 @@
+LangChain is a Python framework that connects large language models (LLMs) to external data sources and tools.
+Key modules:
+- Document loaders: read PDFs, text, websites, etc.
+- Text splitters: divide long text into smaller chunks.
+- Embeddings: turn text into numeric vectors.
+- Vector stores: databases like Chroma or FAISS that store and search vectors.
+- Chains: connect multiple steps like retrieval and question answering.
+LangChain is often used to build RAG applications quickly.

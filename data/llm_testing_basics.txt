@@ -1,0 +1,11 @@
+LLM QA (Quality Assurance) focuses on testing language models for correctness, consistency, and safety.
+
+Key evaluation types:
+- Faithfulness: checks if the model's answer matches the provided context.
+- Answer relevancy: checks if the answer addresses the question.
+- Context precision: checks if retrieved chunks are relevant to the query.
+
+Tools:
+- Ragas: a framework for automated evaluation of RAG systems.
+- LangChain + Pytest: automate your LLM test pipeline.
+Goal: ensure reliable, reproducible responses from generative models.

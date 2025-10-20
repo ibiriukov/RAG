@@ -1,0 +1,27 @@
+RAG Version Control (Embedding Versioning)
+
+In Retrieval-Augmented Generation (RAG) systems, version control is used to manage different generations of document embeddings and their corresponding vector stores.
+
+Each embedding version (e.g., emb_v1, emb_v2, emb_v3) represents a snapshot of:
+1. The corpus (documents in the /data folder at the time of build)
+2. The embedding model used (e.g., text-embedding-3-small)
+3. The chunking strategy (chunk size, overlap)
+4. Metadata and preprocessing configuration
+
+The goal is to maintain reproducibility and traceability — so that each experiment, test, or production run can be tied to a specific embedding index.
+
+---
+
+### Why Version Control Matters in RAG
+
+1. **Reproducibility**
+   When results change, you can trace which embedding version caused the difference.
+
+2. **Comparative Evaluation**
+   Multiple versions can be evaluated with RAGAS metrics:
+   - Faithfulness
+   - Answer Relevancy
+   - Context Precision
+   - Answer Correctness
+
+   Example:
