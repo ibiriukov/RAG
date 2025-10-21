@@ -16,13 +16,11 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 # ✅ Modern Chroma import (no deprecation warning)
 from langchain_chroma import Chroma
 
-
 # Folder with your raw documents
 DATA_DIR = "data"
 
 # Folder where Chroma DB will be saved
 DB_DIR = "store"
-
 
 # Load all supported docs from DATA_DIR
 def load_docs():
@@ -53,7 +51,6 @@ def load_docs():
     # Return the list of Document objects
     return docs
 
-
 # Main pipeline: chunk → embed → persist
 def main():
     # 1) Load raw documents
@@ -65,31 +62,23 @@ def main():
         chunk_overlap=100,   # keep context continuity
     )
 
-    # 3) Split into chunks
     chunks = splitter.split_documents(docs)
 
-    # 4) Ensure every chunk has a 'source' for debugging/citations
     for d in chunks:
-        # keep an existing 'source' if loader set one, else use file path/name
         src = d.metadata.get("source") or d.metadata.get("file_path")
         d.metadata["source"] = src or "data"
 
-    # 5) Create the embedding model (fast & inexpensive)
     embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 
-    # 6) Build and persist the Chroma vector store to disk
     Chroma.from_documents(
         chunks,
         embedding=embeddings,
         persist_directory=DB_DIR,
     )
 
-    # 7) Log success with a quick summary
     unique_sources = {c.metadata.get("source") for c in chunks}
     print(f"✅ Ingested {len(chunks)} chunks from {len(unique_sources)} files into {DB_DIR}")
     print("   Sources:", ", ".join(sorted(s for s in unique_sources if s)))
 
-
-# Run when executed directly (not when imported)
 if __name__ == "__main__":
     main()
