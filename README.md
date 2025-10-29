@@ -1,7 +1,13 @@
 # RAG Pipeline with LangChain, OpenAI, and Chroma
 
-> ⚡ **Quick Summary for Recruiters**  
+> **Overview**  
 A modular Retrieval-Augmented Generation (RAG) pipeline built with Python, LangChain, OpenAI, and Chroma. Demonstrates LLM integration, vector search, and evaluation using RAGAS. Designed for clarity, scalability, and interview-ready presentation. CI/CD-ready by design.
+>
+> **Highlights**
+- Retrieves context and evaluates LLM answers using RAGAS
+- Asserts faithfulness, context precision, and correctness in PyTest
+- Reproducible runs via environment variables and fixed parameters
+- Structured for clean CI/CD adoption
 
 <details>
   <summary>📄 Full Technical Overview</summary>
