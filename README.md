@@ -1,20 +1,20 @@
 # RAG Pipeline with LangChain, OpenAI, and Chroma
 
 > ⚡ **Quick Summary for Recruiters**  
-Modular Retrieval-Augmented Generation (RAG) pipeline using Python, LangChain, OpenAI, and Chroma. Demonstrates LLM integration, vector search, and evaluation with RAGAS. CI/CD-ready and built for clarity, scalability, and interview demonstration.
+A modular Retrieval-Augmented Generation (RAG) pipeline built with Python, LangChain, OpenAI, and Chroma. Demonstrates LLM integration, vector search, and evaluation using RAGAS. Designed for clarity, scalability, and interview-ready presentation. CI/CD-ready by design.
 
 <details>
   <summary>📄 Full Technical Overview</summary>
 
 ## Tech Stack
 
-- LangChain for chaining LLM and retrieval components  
-- OpenAI for embedding generation and LLM responses  
-- Chroma for fast, local vector storage and retrieval  
-- Pytest for evaluation and test orchestration  
-- RAGAS for retrieval quality metrics  
-- Environment variable handling via `.env` and `os.getenv`  
-- Custom logging and assertions for traceability and debugging  
+- **LangChain** — chains LLM and retrieval components  
+- **OpenAI** — powers embedding generation and LLM responses  
+- **Chroma** — provides fast, local vector storage and retrieval  
+- **Pytest** — used for evaluation and test orchestration  
+- **RAGAS** — delivers retrieval quality metrics  
+- **Environment config** — managed via `.env` and `os.getenv`  
+- **Custom logging/assertions** — improves traceability and debugging  
 
 ## Document Coverage
 
@@ -28,10 +28,10 @@ Modular Retrieval-Augmented Generation (RAG) pipeline using Python, LangChain, O
 
 ## CI/CD Readiness
 
-> Jenkins integration is **not yet implemented**, but the project is structured for CI/CD adoption.
+> Jenkins integration is **not yet implemented**, but the project is structured for easy CI/CD adoption.
 
 - Modular scripts support parameterized execution  
-- `.env` secrets managed securely from the **project root**  
+- `.env` secrets managed securely from the project root  
 - Embedding version control via `ragvc.py` enables reproducible builds  
 - Pytest-based evaluation supports automated test runs  
 - Future CI/CD pipeline will include:  
@@ -41,27 +41,27 @@ Modular Retrieval-Augmented Generation (RAG) pipeline using Python, LangChain, O
 
 ## Evaluation & Reporting
 
-- `test_rag_eval.py` uses [RAGAS](https://github.com/explodinggradients/ragas) to evaluate:
-  - Faithfulness — Is the answer grounded in the retrieved context?
-  - Answer Relevancy — Is the answer relevant to the question?
-  - Context Precision — Are the retrieved chunks relevant to the question?
-  - Answer Correctness — Does the answer match the reference answer?
-- Evaluation runs on a Hugging Face `Dataset` with:
-  - Sample questions
-  - Generated answers
-  - Retrieved contexts
-  - Ground-truth reference answers
-- Detailed per-question output includes:
-  - Answer vs. reference comparison
-  - Context chunk previews
-  - Metric scores (rounded to 2 decimals)
-- Minimum thresholds enforced via `assert`:
-  - Faithfulness ≥ 0.70
-  - Answer Relevancy ≥ 0.70
-  - Context Precision ≥ 0.55
-  - Answer Correctness ≥ 0.70
+- `test_rag_eval.py` uses [RAGAS](https://github.com/explodinggradients/ragas) to evaluate:  
+  - **Faithfulness** — Is the answer grounded in the retrieved context?  
+  - **Answer Relevancy** — Is the answer relevant to the question?  
+  - **Context Precision** — Are the retrieved chunks relevant to the question?  
+  - **Answer Correctness** — Does the answer match the reference answer?  
+- Evaluation runs on a Hugging Face `Dataset` with:  
+  - Sample questions  
+  - Generated answers  
+  - Retrieved contexts  
+  - Ground-truth reference answers  
+- Detailed per-question output includes:  
+  - Answer vs. reference comparison  
+  - Context chunk previews  
+  - Metric scores (rounded to 2 decimals)  
+- Minimum thresholds enforced via `assert`:  
+  - Faithfulness ≥ 0.70  
+  - Answer Relevancy ≥ 0.70  
+  - Context Precision ≥ 0.55  
+  - Answer Correctness ≥ 0.70  
 
-## Project Structure
+## 📁 Project Structure
 
 - `.venv/` — Virtual environment  
 - `data/` — Source documents  
@@ -85,7 +85,7 @@ Modular Retrieval-Augmented Generation (RAG) pipeline using Python, LangChain, O
 - `rag_common.py` — Shared utilities  
 - `ragvc.py` — Embedding version control  
 - `sanity_check.py` — Quick validation script  
-- `README.md` — Project overview
+- `README.md` — Project overview  
 
 ## 👨‍💻 Author
 
